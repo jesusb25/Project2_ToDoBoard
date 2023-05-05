@@ -6,6 +6,10 @@
   box-sizing: inherit;
 }
 
+h1, h2 {
+    font-family: monospace;
+    font-size: xxx-large;
+}
 .template, .hidden {
   display: none;
 }
@@ -52,4 +56,27 @@ textarea {
 
 }
 
-/*TODO*/
+.card {
+    /* round corners */
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    margin-bottom: 20px;
+    margin-right: 2%;
+}
+
+.columnTitle {
+    font-size: xxx-large;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 2px solid black;
+    margin-right: 0 auto;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+  }
