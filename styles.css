@@ -1,6 +1,183 @@
-
-form {
-    display: flex;
-    flex-direction: row;
-    margin-top: 20px;
+:root {
+    box-sizing: border-box;
   }
+  
+  * {
+    box-sizing: inherit;
+  }
+  
+  h1, h2 {
+    font-family: monospace;
+    font-size: xxx-large;
+  }
+  
+  .template, .hidden {
+    display: none;
+  }
+  
+  input, textarea, button {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+  }
+  
+  .moving {
+    border: 2px solid black;
+  }
+  
+  textarea {
+    width: 100%;
+  }
+  
+  .description, textarea {
+    white-space: pre-wrap;
+  }
+  
+  .edit, .startMove, .delete {
+    background-color: inherit;
+    border: none;
+  }
+  
+  .edit:hover, .startMove:hover, .delete:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.25);
+  }
+  
+  .moveHere {
+    background-color: inherit;
+    border: none;
+    font-size: small;
+    color: gray;
+  }
+  
+  .moveHere:hover {
+    cursor: pointer;
+    background-color: #e0e0e0;
+    color: black;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    margin-bottom: 20px;
+    margin-right: 2%;
+  }
+  
+  .columnTitle {
+    font-size: xxx-large;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    margin-right: 0 auto;
+  }
+  
+  form {
+    margin: 0.5rem;
+  }
+  
+  * {
+    font-family: sans-serif;
+  }
+  
+  header {
+    background-color: #202020;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    margin: 0;
+  }
+    
+  h1 {
+    color: white;
+    font: x-large;
+    margin: 0;
+    padding: 0;
+    font-size: 2.5rem;
+  }
+    
+  form#addCard {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  input#cardTitle {
+    width: 20em;
+    height: 2rem;
+  }
+  
+  input#cardColor {
+    width: 8em;
+    height: 2rem;
+  }
+  
+  button#addButton {
+    background-color: lightgreen;
+    color: black;
+    padding: 0.25rem 1rem;
+    height: 2rem;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh
+  }
+  
+  main {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 5rem;
+    margin-bottom: 3rem;
+  }
+    
+  .column {
+    flex: 1;
+    flex-grow: 1;
+    background-color: #f0f0f0;
+    background-color: white;
+  }
+  
+  .columnTitle {
+    margin: 1rem 1rem 0 1rem;
+  }
+  
+  #todo, #done {
+    background-color: #f0f0f0;
+  }
+  
+  .moveHere, .card {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .card {
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+    padding: 0.2rem;
+    position: relative;
+  }
+
+.edit, .startMove, .delete {
+    display: none;
+}
+  
+.card:hover {
+    /* display buttons again on line with title */
+    .edit, .startMove, .delete {
+        display: inline-block;
+    }
+}
+
+.buttons {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    gap: 0;
+}
